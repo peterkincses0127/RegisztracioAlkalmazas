@@ -32,7 +32,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.radioF = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioN = new System.Windows.Forms.RadioButton();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -43,6 +43,7 @@
             this.buttonBetoltes = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.SuspendLayout();
             // 
             // txtbox_Nev
@@ -81,16 +82,16 @@
             this.radioF.Text = "F";
             this.radioF.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // radioN
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(146, 74);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(33, 17);
-            this.radioButton1.TabIndex = 5;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "N";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioN.AutoSize = true;
+            this.radioN.Location = new System.Drawing.Point(146, 74);
+            this.radioN.Name = "radioN";
+            this.radioN.Size = new System.Drawing.Size(33, 17);
+            this.radioN.TabIndex = 5;
+            this.radioN.TabStop = true;
+            this.radioN.Text = "N";
+            this.radioN.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
@@ -164,14 +165,23 @@
             this.buttonBetoltes.TabIndex = 14;
             this.buttonBetoltes.Text = "Betöltés";
             this.buttonBetoltes.UseVisualStyleBackColor = true;
+            this.buttonBetoltes.Click += new System.EventHandler(this.buttonBetoltes_Click);
             // 
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
+            this.listBox1.Items.AddRange(new object[] {
+            "Horgászat",
+            "Olvasás",
+            "Zene"});
             this.listBox1.Location = new System.Drawing.Point(267, 41);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(106, 108);
             this.listBox1.TabIndex = 15;
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // Form1
             // 
@@ -187,7 +197,7 @@
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.radioN);
             this.Controls.Add(this.radioF);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -205,7 +215,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.RadioButton radioF;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioN;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
@@ -216,6 +226,7 @@
         private System.Windows.Forms.Button buttonBetoltes;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
 
